@@ -1,0 +1,607 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"nom",
+				"number_core"
+			],
+			[
+				"ele",
+				"elements_par_liste"
+			],
+			[
+				"elem",
+				"elements_par_liste"
+			],
+			[
+				"pus",
+				"push_back"
+			],
+			[
+				"thre",
+				"threads"
+			],
+			[
+				"s",
+				"string"
+			],
+			[
+				"fin",
+				"find_source"
+			],
+			[
+				"f",
+				"for_\tFor Loop"
+			],
+			[
+				"ma",
+				"main\tmain()"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.cpp",
+			"settings":
+			{
+				"buffer_size": 2320,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+				[
+					6,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AwAAAGQEAAAAAAAAZQQAAAAAAAAAAAAAZQQAAAAAAABpBAAAAAAAAAAAAABpBAAAAAAAAG0EAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAZAQAAAAAAABkBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					7,
+					1,
+					"paste",
+					null,
+					"AQAAAGUEAAAAAAAAhwQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbQQAAAAAAABtBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					8,
+					3,
+					"left_delete",
+					null,
+					"AwAAAIsEAAAAAAAAiwQAAAAAAAAEAAAAICAgIIcEAAAAAAAAhwQAAAAAAAAEAAAAICAgIIYEAAAAAAAAhgQAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAjwQAAAAAAACPBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					10,
+					1,
+					"insert",
+					{
+						"characters": "\t"
+					},
+					"AQAAAGkEAAAAAAAAbQQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAaQQAAAAAAABpBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					13,
+					13,
+					"left_delete",
+					null,
+					"DQAAAIcEAAAAAAAAhwQAAAAAAAABAAAAboYEAAAAAAAAhgQAAAAAAAABAAAAXIUEAAAAAAAAhQQAAAAAAAABAAAAboQEAAAAAAAAhAQAAAAAAAABAAAAZYMEAAAAAAAAgwQAAAAAAAABAAAAcIIEAAAAAAAAggQAAAAAAAABAAAAb4EEAAAAAAAAgQQAAAAAAAABAAAAIIAEAAAAAAAAgAQAAAAAAAABAAAAZH8EAAAAAAAAfwQAAAAAAAABAAAAYX4EAAAAAAAAfgQAAAAAAAABAAAAZX0EAAAAAAAAfQQAAAAAAAABAAAAcnwEAAAAAAAAfAQAAAAAAAABAAAAaHsEAAAAAAAAewQAAAAAAAABAAAAdA",
+					"AQAAAAAAAAABAAAAiAQAAAAAAACIBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					14,
+					1,
+					"run_macro_file",
+					{
+						"file": "res://Packages/Default/Delete Left Right.sublime-macro"
+					},
+					"AgAAAHoEAAAAAAAAegQAAAAAAAABAAAAInoEAAAAAAAAegQAAAAAAAABAAAAIg",
+					"AQAAAAAAAAABAAAAewQAAAAAAAB7BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					15,
+					1,
+					"insert",
+					{
+						"characters": "srat"
+					},
+					"BAAAAHoEAAAAAAAAewQAAAAAAAAAAAAAewQAAAAAAAB8BAAAAAAAAAAAAAB8BAAAAAAAAH0EAAAAAAAAAAAAAH0EAAAAAAAAfgQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAegQAAAAAAAB6BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					16,
+					3,
+					"left_delete",
+					null,
+					"AwAAAH0EAAAAAAAAfQQAAAAAAAABAAAAdHwEAAAAAAAAfAQAAAAAAAABAAAAYXsEAAAAAAAAewQAAAAAAAABAAAAcg",
+					"AQAAAAAAAAABAAAAfgQAAAAAAAB+BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					17,
+					1,
+					"insert",
+					{
+						"characters": "tart"
+					},
+					"BAAAAHsEAAAAAAAAfAQAAAAAAAAAAAAAfAQAAAAAAAB9BAAAAAAAAAAAAAB9BAAAAAAAAH4EAAAAAAAAAAAAAH4EAAAAAAAAfwQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAewQAAAAAAAB7BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					18,
+					1,
+					"insert",
+					{
+						"characters": " <<"
+					},
+					"AwAAAH8EAAAAAAAAgAQAAAAAAAAAAAAAgAQAAAAAAACBBAAAAAAAAAAAAACBBAAAAAAAAIIEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfwQAAAAAAAB/BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					19,
+					1,
+					"insert",
+					{
+						"characters": " end"
+					},
+					"BAAAAIIEAAAAAAAAgwQAAAAAAAAAAAAAgwQAAAAAAACEBAAAAAAAAAAAAACEBAAAAAAAAIUEAAAAAAAAAAAAAIUEAAAAAAAAhgQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAggQAAAAAAACCBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					22,
+					1,
+					"insert",
+					{
+						"characters": " <<"
+					},
+					"AwAAAIMEAAAAAAAAhAQAAAAAAAAAAAAAhAQAAAAAAACFBAAAAAAAAAAAAACFBAAAAAAAAIYEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgwQAAAAAAACDBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					24,
+					1,
+					"insert_snippet",
+					{
+						"contents": "\"$0\""
+					},
+					"AQAAAIMEAAAAAAAAhQQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgwQAAAAAAACDBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					25,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAIQEAAAAAAAAhQQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhAQAAAAAAACEBAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/c++_api_data.sublime-build",
+					""
+				],
+				[
+					"Packages/User/c++_api_data.sublime-build",
+					"command obj"
+				]
+			],
+			[
+				"Packages/User/c++_api_data.sublime-build",
+				"command obj"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/c++_api_data.sublime-build",
+					""
+				],
+				[
+					"Packages/User/c++_api_data.sublime-build",
+					"command obj"
+				],
+				[
+					"Packages/User/c++_api_data.sublime-build",
+					"Create static library"
+				],
+				[
+					"Packages/User/c++_api_data.sublime-build",
+					"gdb"
+				]
+			],
+			[
+				"Packages/User/c++_api_data.sublime-build",
+				"gdb"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/c++_api_data.sublime-build",
+					""
+				],
+				[
+					"Packages/User/c++_api_data.sublime-build",
+					"compile obj"
+				]
+			],
+			[
+				"Packages/User/c++_api_data.sublime-build",
+				"compile obj"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/c++_api_data.sublime-build",
+					""
+				],
+				[
+					"Packages/User/c++_api_data.sublime-build",
+					"gdn"
+				]
+			],
+			[
+				"Packages/User/c++_api_data.sublime-build",
+				"gdn"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/c++_custom.sublime-build",
+					""
+				],
+				[
+					"Packages/User/c++_custom.sublime-build",
+					"Debug"
+				]
+			],
+			[
+				"Packages/User/c++_custom.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/c++_custom.sublime-build",
+					""
+				],
+				[
+					"Packages/User/c++_custom.sublime-build",
+					"gdn"
+				]
+			],
+			[
+				"Packages/User/c++_custom.sublime-build",
+				"gdn"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: re",
+				"Package Control: Remove Package"
+			],
+			[
+				"terminus",
+				"Terminus: Close All"
+			],
+			[
+				"terminus clse",
+				"Terminus: Close All"
+			],
+			[
+				"terminus cl",
+				"Terminus: Close"
+			],
+			[
+				"List Shells",
+				"Terminus: List Shells"
+			],
+			[
+				"package",
+				"Package Control: Enable Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Advanced Install Packages"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Pac",
+				"Package Control: Install Package"
+			],
+			[
+				"the",
+				"UI: Select Theme"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Lorem ipsum"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/F/projects/custom_make",
+		"/F/projects/custom_make/obj",
+		"/F/projects/custom_make/src"
+	],
+	"file_history":
+	[
+		"/F/projects/custom_make/src/text8.cpp",
+		"/F/projects/custom_make/src/text9.cpp",
+		"/F/projects/custom_make/src/text7.cpp",
+		"/F/projects/custom_make/src/text6.cpp",
+		"/F/projects/custom_make/src/text5.cpp",
+		"/F/projects/custom_make/src/text4.cpp",
+		"/F/projects/custom_make/src/text3.cpp",
+		"/F/projects/custom_make/src/text2.cpp",
+		"/F/projects/custom_make/src/text12.cpp",
+		"/F/projects/custom_make/src/text11.cpp",
+		"/F/projects/custom_make/src/text10.cpp",
+		"/F/projects/custom_make/src/text1.cpp",
+		"/F/projects/custom_make/main.cpp",
+		"/F/projects/custom_make/src/main.cpp",
+		"/F/projects/etst/src/main.cpp",
+		"/F/projects/etst/CMakeLists.txt",
+		"/F/projects/etst/Makefile",
+		"/F/projects/backtest/api-data-vscode/Makefile",
+		"/F/projects/backtest/api-data-vscode/Makefile.txt",
+		"/F/projects/backtest/api-data-vscode/outputf.in",
+		"/F/sublime text/Data/Packages/User/c++_api_data.sublime-build",
+		"/F/projects/backtest/api-data-vscode/a.out",
+		"/F/projects/backtest/api-data-vscode/src/crypto.cpp",
+		"/F/projects/backtest/api-data-vscode/src/main.cpp",
+		"/F/projects/backtest/api-data-vscode/example/main.cpp",
+		"/F/sublime text/Data/Packages/User/c++_custom.sublime-build",
+		"/F/projects/backtest/api-data-vscode/inputf.in",
+		"/F/projects/backtest/api-data-vscode/outil_requete.hpp",
+		"/F/projects/backtest/api-data-vscode/forex.cpp",
+		"/F/projects/backtest/api-data-vscode/main.cpp",
+		"/F/projects/test/outputf.in",
+		"/F/projects/test/inputf.in",
+		"/F/projects/test/main.cpp",
+		"/F/sublime text/Data/Packages/User/Package Control.sublime-settings"
+	],
+	"find":
+	{
+		"height": 23.3333333333
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.cpp",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2320,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1157,
+								1157
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 351.333333333,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.3333333333
+	},
+	"input":
+	{
+		"height": 39.3333333333
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.Terminus":
+	{
+		"height": 160.0
+	},
+	"output.exec":
+	{
+		"height": 145.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/C++/C++ Single File.sublime-build",
+	"project": "custom_make.sublime-project",
+	"replace":
+	{
+		"height": 42.6666666667
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 172.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}
