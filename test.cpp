@@ -1,9 +1,15 @@
+#include <chrono>
+#include <filesystem>
+#include <fstream>
 #include <iostream>
-#include <vector>
-#include <string>
+#include <ctime>
 
-int main(int argc, char *argv[]) {
-    
+int main()
+{
+    std::filesystem::path p = "src/main.cpp";
 
-    return 0;
+    std::filesystem::file_time_type ftime = std::filesystem::last_write_time(p);
+    std::time_t cftime = decltype(ftime)::clock::to_time_t(ftime);
+    std::string str_time = std::ctime(&cftime);
+    std::cout << "File write time is " << str_time << std::endl;
 }

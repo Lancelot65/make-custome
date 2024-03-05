@@ -6,28 +6,42 @@
 #include <thread>
 #include <sstream>
 #include <nlohmann/json.hpp>
+#include <cstring>
+#include <cstdlib> 
 
 using json = nlohmann::json;
 namespace fs = std::filesystem;
 
+void System(const std::string command)
+{
+    std::cout << command << std::endl;
+
+    std::system(command.c_str());
+}
+
 class custom_make
 {
 private:
-    std::string source;
-    int number_core;
+    std::string source = "src";
+    int number_core = 4;
+
+    int argc;
+    const char **argv;
 
     bool debug;
     std::vector<std::string> linker;
     std::vector<fs::path> cpp_file;
 
 public:
-    custom_make(std::string source = "src", int number_core = 4) :
-            source(source), number_core(number_core)
+    custom_make(int argc, char const *argv[]) :
+            argc(argc), argv(argv)
             {
         if (!this->check_folder_integrity()) 
         {
             throw std::runtime_error("can't find folder");
         }
+        this->check_parametre();
+        
 
         for (const auto &entry : fs::directory_iterator(this->source))
         {
@@ -66,14 +80,14 @@ public:
 
         if (!fs::exists("bin"))
         {
-            fs::create_directories("bin/release");
-            fs::create_directories("bin/debug");
+            fs::create_directories("bin\\release");
+            fs::create_directories("bin\\debug");
         }
 
         if (!fs::exists("obj"))
         {
-            fs::create_directories("obj/release");
-            fs::create_directories("obj/debug");
+            fs::create_directories("obj\\release");
+            fs::create_directories("obj\\debug");
         }
         return true;
     }
@@ -84,14 +98,10 @@ public:
         for (int i = start; i <= end; ++i)
         {
             std::stringstream command_stream;
-            command_stream << "g++ -c " << (this->debug ? "-g" : "") << " " << this->cpp_file[i].string()
-                           << " -o obj/" << this->cpp_file[i].stem().string() << ".o";
+            command_stream << "g++ -c" << (this->debug ? " -g " : " ") << this->cpp_file[i].string()
+                           << " -o " << (this->debug ? "obj\\debug\\" : "obj\\release\\") << this->cpp_file[i].stem().string() << ".o";
             std::string command = command_stream.str();
-            int result = system(command.c_str());
-            if (result != 0)
-            {
-                std::cerr << "Error compiling: " << command << std::endl;
-            }
+            System(command);
         }
     }
 
@@ -126,14 +136,47 @@ public:
 
     void final_compilation()
 	{
-	    std::string final_compilation = "g++ obj//*.o -o foo.exe";
-	    system(final_compilation.c_str());
+        std::string liste_linkers;
+        for (auto i : this->linker)
+        {
+            liste_linkers += i;
+            liste_linkers += " ";
+        }
+
+        std::stringstream ss;
+        ss << "g++" << (this->debug ? " -g " : " ") << (this->debug ? "obj\\debug\\*.o" : "obj\\release\\*.o") << " -o " << (this->debug ? "bin\\debug\\a.exe" : "bin\\release\\a.exe") << " " << liste_linkers;
+	    System(ss.str());
 	}
+
+    void check_parametre()
+    {
+        for (int i = 0; i < argc; ++i)
+        {
+            if (std::strcmp(argv[i], "-d") == 0) 
+            {
+                this->debug = true;
+            }
+            else if (std::strncmp(argv[i], "-l", 2) == 0)
+            {
+                this->linker.push_back(argv[i]);
+            }
+            else if (std::strncmp(argv[i], "-c", 2) == 0)
+            {
+                const char* number_str = argv[i] + 2;
+                this->number_core = std::atoi(number_str);
+            }
+            else if (std::strncmp(argv[i], "-s", 2) == 0)
+            {
+                const char* new_path = argv[i] + 2;
+                this->source = std::string(new_path);   
+            }
+        }
+    }
 
 };
 
-int main(int argc, char const *argv[])
+int main(int argc, const char *argv[])
 {
-    custom_make();
+    custom_make(argc, argv);
     return 0;
 }
