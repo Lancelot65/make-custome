@@ -20,7 +20,7 @@ namespace fs = std::filesystem;
 
 void System(std::string commande)
 {
-    // std::cout << commande;
+    std::cout << commande << std::endl;
     system(commande.c_str());
 }
 
@@ -107,9 +107,10 @@ public:
             {
                 throw std::runtime_error("can't find folder");
             }
-            this->check_parametre();
             manage_json mj;
             this->json_data = mj.return_json(); 
+
+            this->check_parametre();
 
 
             for (const auto &entry : fs::directory_iterator(this->source))
@@ -119,6 +120,8 @@ public:
                     this->cpp_file.push_back(entry.path());
                 }
             }
+
+
             this->compilation_obj();
             this->final_compilation();
         }
@@ -165,24 +168,6 @@ public:
     {
         std::cout << "thread open\n";
 
-        std::vector<std::string> v_lib;
-
-        // if (!fs::exists(this->lib_source))
-        // {
-        //     for (const auto &entry : fs::directory_iterator(this->lib_source))
-        //     {
-        //         if (fs::is_regular_file(entry.path()))
-        //         {
-        //             v_lib.push_back(entry.path().filename().string());
-        //         }
-        //     }
-
-        //     for (auto i : v_lib)
-        //     {
-        //         std::cout << i << std::endl;
-        //     }
-        // }
-
         for (int i = start; i <= end; ++i)
         {
             struct stat fileInfo;
@@ -195,13 +180,11 @@ public:
 
             std::stringstream path_obj;
             path_obj << "obj\\" << (this->debug ? "debug" : "release") << "\\" << this->cpp_file[i].stem().string();
-            std::cout << path_obj.str() << std::endl;
 
             if (file_exist(path_obj.str()) && this->json_data[(this->debug ? "debug" : "release")].find(this->cpp_file[i].stem().string()) != this->json_data[(this->debug ? "debug" : "release")].end())
             {
                 
                 int64_t last_time = this->json_data[(this->debug ? "debug" : "release")][this->cpp_file[i].stem().string()];
-                std::cout << actuel_time_file << "    " << last_time << std::endl;
 
                 if (actuel_time_file == last_time)
                 {
@@ -219,8 +202,6 @@ public:
             }
             else
             {
-                // std::cout << "no exists";
-
                 std::stringstream command_stream;
                 command_stream << "g++ -c" << (this->debug ? " -g " : " ") << this->cpp_file[i].string()
                                << " -o " << (this->debug ? "obj\\debug\\" : "obj\\release\\") << this->cpp_file[i].stem().string() << ".o";
@@ -241,18 +222,14 @@ public:
         int index = 0;
         for (int i = 0; i < number_core - 1; ++i)
         {
-            if (index < total_elements) {
-                threads.push_back(std::thread(&custom_make::processElements, this, index,
-                                              index + elements_per_list - 1));
+            if (index < total_elements)
+            {
+                threads.push_back(std::thread(&custom_make::processElements, this, index, index + elements_per_list - 1));
                 index += elements_per_list;
             }
         }
 
-        if (total_elements > this->number_core - 1)
-        {
-            threads.push_back(std::thread(&custom_make::processElements, this,
-                                          total_elements - extra, total_elements - 1));
-        }
+        threads.push_back(std::thread(&custom_make::processElements, this, total_elements - extra, total_elements - 1));
 
         for (auto &thread : threads)
         {
@@ -265,6 +242,14 @@ public:
 
     void final_compilation()
 	{
+        std::string v_lib;
+
+
+        if (fs::exists("lib"))
+        {
+            v_lib = "lib\\*.a";
+        }
+
         std::string liste_linkers;
         for (auto i : this->linker)
         {
@@ -273,7 +258,7 @@ public:
         }
 
         std::stringstream ss;
-        ss << "g++" << (this->debug ? " -g " : " ") << (this->debug ? "obj\\debug\\*.o" : "obj\\release\\*.o") << " -o " << (this->debug ? "bin\\debug\\a.exe" : "bin\\release\\a.exe") << " " << liste_linkers;
+        ss << "g++" << (this->debug ? " -g " : " ") << (this->debug ? "obj\\debug\\*.o" : "obj\\release\\*.o") << " -o " << (this->debug ? "bin\\debug\\a.exe" : "bin\\release\\a.exe") << " " << liste_linkers << " " << v_lib;
 	    System(ss.str().c_str());
 	}
 
