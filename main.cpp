@@ -178,8 +178,9 @@ public:
             }
             int64_t actuel_time_file = fileInfo.st_mtime;
 
+
             std::stringstream path_obj;
-            path_obj << "obj\\" << (this->debug ? "debug" : "release") << "\\" << this->cpp_file[i].stem().string();
+            path_obj << "obj\\" << (this->debug ? "debug" : "release") << "\\" << this->cpp_file[i].stem().string() << ".o";
 
             if (file_exist(path_obj.str()) && this->json_data[(this->debug ? "debug" : "release")].find(this->cpp_file[i].stem().string()) != this->json_data[(this->debug ? "debug" : "release")].end())
             {
