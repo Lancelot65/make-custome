@@ -115,7 +115,7 @@ public:
 
             for (const auto &entry : fs::directory_iterator(this->source))
             {
-                if (fs::is_regular_file(entry.path()))
+                if (fs::is_regular_file(entry.path()) && entry.path().extension().string() == ".cpp")
                 {
                     this->cpp_file.push_back(entry.path());
                 }

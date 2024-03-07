@@ -2,5 +2,7 @@
     "debug": {
         "main": 1709760536
     },
-    "release": {}
+    "release": {
+        "main": 1709760536
+    }
 }
